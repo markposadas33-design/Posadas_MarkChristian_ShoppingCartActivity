@@ -1,6 +1,11 @@
 Posadas, Mark Christian
+
+
 Shopping Cart System. BSIT 1-1
+
+
 This program is a console-based shopping cart system developed in C# using object-oriented programming concepts.
+
 It allows users to:
 
 •Browse the available products in the store
