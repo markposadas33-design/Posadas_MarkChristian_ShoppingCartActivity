@@ -16,6 +16,10 @@
                 new Product(8, "Jose Cuervo Tequila", 1300, 4)
             };
 
+            // created a cart array
+            CartItem[] cart = new CartItem[100];
+            int cartCount = 0;
+
             bool shopping = true;
 
             // loop for products
@@ -64,7 +68,7 @@
 
                 Product selectedProduct = products[productID - 1];
 
-                int quantity;
+                int quantity = 0;
                 bool isvalidquantity = false;
 
                 // same logic
@@ -97,6 +101,48 @@
 
                     isvalidquantity = true;
                 }
+
+                // Computing the total of the item purchased (subtotal)
+                double subtotal = quantity * selectedProduct.Price;
+
+                // checking if item is already in the cart
+                bool found = false;
+                for (int i = 0; i < cartCount; i++)
+                {
+                    // if it is already in the cart
+
+                    /* 
+                        update the existing cart quantity and subtotal
+                        instead of adding a new cart row
+                    */
+                    if (cart[i].Product.Id == selectedProduct.Id)
+                    {
+                        cart[i].Quantity += quantity;
+                        cart[i].Subtotal += subtotal;
+                        found = true;
+                        break;
+                    }
+                }
+
+                // Just add new item
+                if (!found)
+                {
+                    cart[cartCount] = new CartItem(selectedProduct, quantity);
+                    cartCount++;
+                }
+
+                // deduct the stock
+                selectedProduct.Stock -= quantity;
+
+                // ask user if they want to continue adding
+                Console.Write("Continue Adding? (Y/N): ");
+                string choice = Console.ReadLine().ToUpper();
+
+                if (choice != "Y")
+                {
+                    shopping = false;
+                }
+
 
             }
         }
