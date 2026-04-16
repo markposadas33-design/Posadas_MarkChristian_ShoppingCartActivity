@@ -2,7 +2,8 @@
 {
     class Program
     {
-        public void Main()
+        // can't play because it should be static 
+        static void Main()
         {
             Product[] products = new Product[]
             {
@@ -142,9 +143,47 @@
                 {
                     shopping = false;
                 }
-
-
             }
+
+            // will compute the grand total
+            double grandTotal = 0;
+            for (int i = 0; i < cartCount; i++)
+            {
+                grandTotal += cart[i].Subtotal;
+            }
+
+            // creating a discount variable
+            double discount = 0;
+
+            // if the total is 5000 above: add 10% discount
+            if (grandTotal >= 5000)
+            {
+                discount = grandTotal * 0.10;
+            }
+
+            // applying the discount
+            double finalTotal = grandTotal - discount;
+
+            // create a receipt
+            Console.WriteLine("\n=== RECEIPT ===");
+            for (int i = 0; i < cartCount; i++)
+            {
+                Console.WriteLine($"{cart[i].Product.Name} x{cart[i].Quantity} = ₱{cart[i].Subtotal}");
+            }
+
+            // display other things
+            Console.WriteLine($"Grand Total: ₱{grandTotal}");
+            Console.WriteLine($"Discount: ₱{discount}");
+            Console.WriteLine($"Final Total: ₱{finalTotal}");
+
+            // reshow the product to see the new stocks
+            Console.WriteLine("\n-----|REMAINING STOCKS|-----");
+            for (int i = 0; i < products.Length; i++)
+            {
+                Console.WriteLine(products[i].DisplayProduct());
+            }
+
+            // END
         }
     }
 }
