@@ -63,6 +63,41 @@
                 }
 
                 Product selectedProduct = products[productID - 1];
+
+                int quantity;
+                bool isvalidquantity = false;
+
+                // same logic
+                // loop for quantity validation
+                while (!isvalidquantity)
+                {
+                    Console.Write("Enter quantity: ");
+                    string qtyInput = Console.ReadLine();
+
+                    // checking if numeric
+                    if (!int.TryParse(qtyInput, out quantity))
+                    {
+                        Console.WriteLine("Invalid input");
+                        continue;
+                    }
+
+                    // checking if the quantity is valid
+                    if (quantity <= 0)
+                    {
+                        Console.WriteLine("Quantity must be greater than 0");
+                        continue;
+                    }
+
+                    // Check stock using method
+                    if (!selectedProduct.HasEnoughStock(quantity))
+                    {
+                        Console.WriteLine("Not enough stocks");
+                        continue;
+                    }
+
+                    isvalidquantity = true;
+                }
+
             }
         }
     }
