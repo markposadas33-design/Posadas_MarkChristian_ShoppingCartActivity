@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Posadas-Quiz_2&3")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+322fd3877b4469695a526e2139b5ab7235e505d6")]
 [assembly: System.Reflection.AssemblyProductAttribute("Posadas-Quiz_2&3")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Posadas-Quiz_2&3")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Yor\\source\\repos\\Posadas-Quiz_2&3\\Posadas-Quiz_2&3\\Posadas-Quiz_2&3.csproj",
+      "projectUniqueName": "C:\\Users\\Yor\\Source\\Repos\\Posadas_MarkChristian_ShoppingCartActivity\\Posadas_MarkChristian_ShoppingCartActivity\\Posadas-Quiz_2&3\\Posadas-Quiz_2&3\\Posadas-Quiz_2&3.csproj",
       "projectName": "Posadas-Quiz_2&3",
-      "projectPath": "C:\\Users\\Yor\\source\\repos\\Posadas-Quiz_2&3\\Posadas-Quiz_2&3\\Posadas-Quiz_2&3.csproj",
+      "projectPath": "C:\\Users\\Yor\\Source\\Repos\\Posadas_MarkChristian_ShoppingCartActivity\\Posadas_MarkChristian_ShoppingCartActivity\\Posadas-Quiz_2&3\\Posadas-Quiz_2&3\\Posadas-Quiz_2&3.csproj",
       "packagesPath": "C:\\Users\\Yor\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Yor\\source\\repos\\Posadas-Quiz_2&3\\Posadas-Quiz_2&3\\obj\\",
+      "outputPath": "C:\\Users\\Yor\\Source\\Repos\\Posadas_MarkChristian_ShoppingCartActivity\\Posadas_MarkChristian_ShoppingCartActivity\\Posadas-Quiz_2&3\\Posadas-Quiz_2&3\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

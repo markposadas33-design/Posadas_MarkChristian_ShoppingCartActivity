@@ -25,5 +25,12 @@ namespace Posadas_Quiz_2_3
         {
             return $"{Id}. {Name} - ₱{Price} (Stock: {Stock})";
         }
+
+        // Method that also went missing
+        // Chosen required method.
+        public bool HasEnoughStock(int quantity)
+        {
+            return quantity <= Stock;
+        }
     }
 }
